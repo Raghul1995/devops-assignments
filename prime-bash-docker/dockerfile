@@ -1,0 +1,9 @@
+FROM ubuntu:latest
+
+RUN apt-get update && apt-get install -y bash
+
+COPY prime_check.sh /prime_check.sh
+
+WORKDIR /
+
+CMD ["/bin/bash", "prime_check.sh"]
